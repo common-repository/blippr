@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<style>
+			<!--
+				body { font-family: sans-serif; }
+			//-->
+		</style>
+	</head>
+	<body>
+		<h2>How to use the blippr plugin</h2>
+
+		<p>Generally, you can simply write an article, and blippr will inject the appropriate content. There are a few things to keep in mind:</p>
+
+		<ul>
+		<li>blippr primarily looks at link text, and does title comparisons. If you want to have a blippr smiley next to one of your links, ensure that the link text matches a app title in blippr's database.
+		<li>If you don't want to change the link text, you can add a blippr smiley after a link with the following shortcode syntax:
+
+		<pre>
+[blippr title="Facebook" /]
+
+Or:
+
+[blippr id="1234" /]
+		</pre>
+		</li></ul>
+		  
+		<p>Obviously, the title is the title to search for, and the ID is a blippr ID (which is obtainable via a title's URL on blippr).</p>
+
+		Finally, if you just want to put a blippr smiley next to a non-linked name in a post, you can use the following syntax:
+
+		<pre>
+[blippr]Facebook[/blippr].
+		</pre>
+
+		<p>That will append a smiley after the word "Facebook" in the post.</p>
+
+		<h2>Caching and modifications</h2>
+
+		<p>By default, there is a fairly aggressive caching layer in place to ensure that blogs that host the blippr plugin remain fast. However, when you save a post, a new copy of the post is cached with the blippr content inlined. Thus, assume the following scenario:</p>
+
+		<ol>
+		<li>You write a post, which contains a link to "Super App".</li>
+		<li>You note that "Super App" does not have a smiley (as it does not exist in blippr's database)</li>
+		<li>You add Super App to blippr</li>
+		<li>Super App doesn't automatically get a smiley next to it because of the caching</li>
+		</ol>
+
+		<p>At this point, you will want to go back into the Dashboard and re-save your post. This will cause Wordpress to pull a fresh copy of the content from blippr, including the new Super App node.</p>
+
+		<h2>Adding apps from Wordpress</h2>
+
+		<p>The blippr plugin contains a tool to help you add applications directly to blippr. In the blippr box, click "New App", fill out the requested fields, and submit it. The app will be added, and a shortcode tag will automatically be inserted into your post-in-progress.</p>
+
+		<p>Please note that this functionality may not work until blippr credentials are configured in the blippr plugin. I think this still needs to be done.</p>
+	</body>
+</html>

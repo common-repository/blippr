@@ -1,0 +1,13 @@
+.blippr_title div.blippr_loader {
+	color: #ccc;
+	text-align: center;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.blippr_title div.blippr_loader img {
+	border: 0;
+	padding: 0;
+	margin: 0 0 0 10px;
+	vertical-align: middle;
+}
